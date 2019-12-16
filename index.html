@@ -1,0 +1,38 @@
+<html>
+
+<head>
+    <title>GST-Codefest2019: Test API</title>
+    <script>
+        let playerId = 'cd9a5de8-76b4-4794-b554-0bc6954f7569';
+        // let playerId = '22b2e823-3edc-4b68-bfbf-01e36cebb597';
+        // let playerId = 'player1-xxx';
+    </script>
+    <script src="socket.io.js"></script>
+    <script src="lodash.js"></script>
+    <script src="config.js"></script>
+    <script src="FindBestWay.js"></script>
+    <script src="function.js"></script>
+</head>
+
+<body onkeypress="keypress()">
+    <h1>Player 1</h1>
+    <p>Server Connecting Status: <label id="connected-status" style="color:red">N/A</label></p>
+    <p>Socket Status: <label id="socket-status" style="color: red">N/A</label></p>
+    <p>Joined Game Status: <label id="joingame-status" style="color: red">N/A</label></p>
+    <p>TickTack Game Status: <label id="ticktack-status" style="color: red">N/A</label></p>
+    <p>(*)View more Information in Console</p>
+    GAME ID: <input type="text" id='gameid'><br>
+    PLAYER ID: <input type="text" id='playerID'><br>
+    <button onclick="connect()">connect</button>
+    <button onclick="saveFile()">saveFile</button>
+    <button onclick="run1()">run 1</button>
+    <button onclick="run2()">run 2</button>
+
+    <button onclick="stop()">stop</button>
+
+
+    <input type="text" id='moveQueue'> <button onclick="move(document.getElementById('moveQueue').value)">move</button>
+    <script src="main.js"></script>
+</body>
+
+</html>
